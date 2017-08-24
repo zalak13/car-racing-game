@@ -1,3 +1,5 @@
+# [Home Page Link](https://zalak13.github.io/car-racing-game/)
+
 # car-racing-game
 Car racing game using HTML, CSS, JQuery,JavaScript. IFFE and Modular design applied to JavaScript.
 
@@ -18,4 +20,3 @@ Car racing game using HTML, CSS, JQuery,JavaScript. IFFE and Modular design appl
 * racing-stripes
 
 
-# [Home Page Link](https://zalak13.github.io/car-racing-game/)
