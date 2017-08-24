@@ -18,4 +18,4 @@ Car racing game using HTML, CSS, JQuery,JavaScript. IFFE and Modular design appl
 * racing-stripes
 
 
-# [HomePage](https://github.com/zalak13/car-racing-game/blob/master/index.html)
+# [Home Page Link](https://zalak13.github.io/car-racing-game/)
