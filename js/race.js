@@ -49,9 +49,10 @@ var userActions = (function () {
         for (var i = 0; i < defaultTruck; i++) {
 
             var truckId = "truck" + i;
-            $('.container').append('<div class="track"><label></label><i class="fa fa-truck" aria-hidden="true"></i></div>');
+            $('.container').append('<div class="track"><div class="truckDiv" style="position: absolute"><label></label><i class="fa fa-truck" aria-hidden="true" ></i></div></div>');
             document.getElementsByTagName('i')[i].setAttribute('id', truckId);
             document.getElementsByTagName('label')[i].setAttribute('id', 'amt' + i);
+            document.getElementsByClassName('truckDiv')[i].setAttribute('id','track'+i);
         }
         $('#startRaceBtn').prop('disabled', true);
     }
@@ -70,9 +71,10 @@ var userActions = (function () {
         for (var i = 0; i < defaultTruck; i++) {
 
             var truckId = "truck" + i;
-            $('.container').append('<div class="track"><label class="lblname"></label><i class="fa fa-truck"  aria-hidden="true"></i></div>');
+            $('.container').append('<div class="track"><div class="truckDiv" style="position: absolute"><label class="lblname"></label><i class="fa fa-truck"  aria-hidden="true"></i></div></div>');
             document.getElementsByTagName('i')[i].setAttribute('id', truckId);
             document.getElementsByClassName('lblname')[i].setAttribute('id', 'amt' + i);
+            document.getElementsByClassName('truckDiv')[i].setAttribute('id','track'+i);
         }
 
         $('.truckForm').remove();
@@ -121,12 +123,12 @@ var userActions = (function () {
             var runDistance = 1 + Math.floor(Math.random() * trackWidth);
             var truckId = "truck" + i;
             var amtId = "amt" + i;
+            var combineId = "track" +i;
             if (truckId != ("truck" + randomTruck)) {
-                $('#' + amtId).animate({marginLeft: runDistance - labelWidth});
-                $('#' + truckId).animate({marginLeft: runDistance});
+                $('#'+combineId).animate({marginLeft: runDistance-labelWidth-1}); // 1 for buffer
+
             } else {
-                $('#' + amtId).animate({marginLeft: trackWidth - labelWidth});
-                $('#' + truckId).animate({marginLeft: trackWidth});
+                $('#'+combineId).animate({marginLeft: trackWidth-labelWidth+1});
                 truckWinner = truckId;
             }
         }
